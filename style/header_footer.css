@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root{
+    --colorPrimary:rgba(22, 162, 175, 0.821);
+    --colorPrimary2:rgba(22, 162, 175, 0.821);
+    --colorPrimary3:rgba(6, 106, 115, 0.83);
+
+}
+
+#btn_menu{
+    font-size: 20px;
+    color: #fff;
+}
+
+body{
+    background-color: black;
+}
+
+.content{
+
+    width: 100%;
+    height: 100vh;
+}
+
+
+.content img{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 75px;
+    background-color: var(--colorPrimary);
+    position: relative;
+}
+
+
+header nav{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a,li,h2{
+    color: rgb(215, 215, 215);
+}
+
+
+
+.navegation{
+    
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    width: 0%;
+    height: 0px;
+    overflow: hidden;
+    background-color: var(--colorPrimary2);
+    transition: all 0.4s;
+}
+
+.navegation li{
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* TOGGLE (JS) NAVEGATION */
+
+.navegation_on{
+    transition: all 0.4s;
+    height:auto;
+    width: 100%;
+}
+
+
+.service__sub_menu{
+    background-color: var(--colorPrimary3);
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.4s
+}
+
+.service__sub_menu_on{
+    height: 159px;
+    transition: all 0.4s
+
+}
+
+/* TOGGLE (JS) Ingresar */
+
+.ingresar__sub_menu{
+    background-color: var(--colorPrimary3);
+    height: 0px;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.ingresar__sub_menu_on{
+
+    height: 159px;
+    transition: all 0.4s;
+}
+
+
+/* -------------------- RESPONSIVE DESIGN --------------------- */
+/* -------------------------------------- */
+/* -------------------- R RESPONSIVE DESIGN ---ESPONSIVE DESIGN --------------------- */
+
+
+@media screen and (min-width: 650px){
+
+    #btn_menu{
+        display: none;
+    }
+
+    .navegation{
+        position: static;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        
+
+    }
+
+    .navegation li{
+        text-align: center;
+        /* margin: 0 10px; */
+    }
+
+    .ingresar__sub_menu{
+        /* background-color: #fff; */
+        box-shadow: 5px 5px 10px 0 rgba(17, 16, 16, 0.869);
+        position: absolute;
+        width: 220px;
+    }
+
+     .service__sub_menu{
+        /* background-color: #fff; */
+        box-shadow: 5px 5px 10px 0 rgba(17, 16, 16, 0.869);
+        position: absolute;
+        width: 200px;
+    }
+}
